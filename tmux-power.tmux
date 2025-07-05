@@ -61,6 +61,14 @@ case $TC in
     'everforest' )
         TC='#a7c080'
         ;;
+    'material-darker' )
+        TC='#ffcb6b'      # yellow (color3) for accent color
+        G0='#212121'      # background
+        G1='#414141'      # selection_background
+        G2='#545454'      # inactive_border_color
+        G3='#454545'      # color0 (black)
+        G4='#eeffff'      # foreground
+        ;;
 esac
 
 G0=$(tmux_get @tmux_power_g0 "#262626")
