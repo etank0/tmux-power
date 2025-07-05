@@ -62,12 +62,14 @@ case $TC in
         TC='#a7c080'
         ;;
     'material-darker' )
-        TC='#ffcb6b'      # yellow (color3) for accent color
+        TC='#ffcb6b'      # theme color
         G0='#212121'      # background
         G1='#414141'      # selection_background
         G2='#545454'      # inactive_border_color
-        G3='#454545'      # color0 (black)
+        G3='#656565'      # lighter color
         G4='#eeffff'      # foreground
+        G5='#3a3a3a'      # bkp select bg
+        G6='#ffffff'      # bkp select fg
         ;;
 esac
 
@@ -76,6 +78,8 @@ G1=$(tmux_get @tmux_power_g1 "#303030")
 G2=$(tmux_get @tmux_power_g2 "#3a3a3a")
 G3=$(tmux_get @tmux_power_g3 "#444444")
 G4=$(tmux_get @tmux_power_g4 "#626262")
+G5=$(tmux_get @tmux_power_g5 "#3a3a3a")
+G6=$(tmux_get @tmux_power_g6 "#ffffff")
 
 # Status options
 tmux_set status-interval 1
@@ -170,4 +174,5 @@ tmux_set message-style "fg=$TC,bg=$G0"
 tmux_set message-command-style "fg=$TC,bg=$G0"
 
 # Copy mode highlight
-tmux_set mode-style "bg=$TC,fg=$G4"
+tmux_set mode-style "bg=$G5,fg=$G6"
+
